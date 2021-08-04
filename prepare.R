@@ -12,6 +12,6 @@ jobroot <- file.path(bq, jobname)
 dir.create(jobroot, recursive = TRUE)
 for (x in seq_len(N)) {
   dir.create(file.path(jobroot, x, 'out'), recursive = TRUE)
-  dir.create(file.path(jobroot, x, 'data'))
-  saveRDS(data[[x]], file=file.path(jobroot, x, 'data', 'data.rds'))
+  dir.create(file.path(jobroot, x, 'in'))
+  saveRDS(data[[x]], file=file.path(jobroot, x, 'in', 'data.rds'))
 }
