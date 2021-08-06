@@ -5,9 +5,5 @@ set_inout <- function() {
 
   assign('..in', file.path('in', workpath), pos=1)
   assign('..out', file.path('out', workpath), pos=1)
+  dir.create(..out, recursive = TRUE)
 }
-set_inout()
-
-# start with the standard script
-source(file.path(..in, '..', 'script.R'))
-
