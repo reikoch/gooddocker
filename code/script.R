@@ -1,6 +1,7 @@
 # ..in in global environment shows location of input
 # ..out in global environment shows output location
-print(' hello here!')
+set_inout()
+print(paste('input from', ..in, 'output to', ..out))
 
 rnorm(1)
 write(.Random.seed, file.path(..out, 'random.txt'))
